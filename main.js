@@ -4,6 +4,7 @@
 // @version      1.0.0
 // @description  Highlights queer-related words using their associated pride flag colours.
 // @author       Yeosangist
+// @license      CC BY-NC-SA
 // @match        *://*/*
 // @run-at       document-start
 // @grant        none
