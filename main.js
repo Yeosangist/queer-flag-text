@@ -480,7 +480,7 @@
 
         const parent = node.parentElement;
 
-        if (IGNORED_ELEMENTS.has(parent.tagName)) {
+        if (IGNORED_ELEMENTS.has(parent.tagName) || parent.isContentEditable) {
             return;
         }
 
@@ -549,6 +549,10 @@
             return;
         }
 
+        if (element.isContentEditable) {
+            return;
+        }
+
         if (element.classList.contains(HIGHLIGHT_CLASS)) {
             return;
         }
@@ -565,6 +569,10 @@
                     }
 
                     if (IGNORED_ELEMENTS.has(parent.tagName)) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+
+                    if (parent.isContentEditable) {
                         return NodeFilter.FILTER_REJECT;
                     }
 
