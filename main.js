@@ -31,7 +31,7 @@
 
         // Rainbow / LGBTQ+
         {
-            words: ['queer', 'lgbtq', 'lgbtq+', 'lgbt', 'lgbt+'],
+            words: ['queer', 'lgbtq', 'lgbtq+', 'lgbt', 'lgbt+', 'lgbtqia', 'lgbtqia+', 'pride'],
             colors: [
                 '#E40303',
                 '#FF8C00',
@@ -44,7 +44,7 @@
 
         // Gay men
         {
-            words: ['gay', 'achillean'],
+            words: ['gay', 'achillean', 'mlm'],
             colors: [
                 '#078D70',
                 '#26CEAA',
@@ -58,7 +58,7 @@
 
         // Lesbian
         {
-            words: ['lesbian'],
+            words: ['lesbian', 'wlw'],
             colors: [
                 '#D52D00',
                 '#EF7627',
@@ -138,13 +138,25 @@
             ]
         },
 
+        // AroAce
+        {
+            words: ['aroace', 'aromantic asexual', 'aromantic-asexual', 'aromantic/asexual'],
+            colors: [
+                '#DD8A00',
+                '#E9CC07',
+                '#FFFFFF',
+                '#65B0DD',
+                '#213C57'
+            ]
+        },
+
         // Demisexual
         {
             words: ['demisexual', 'demi'],
             colors: [
                 '#000000',
-                '#6E0070',
                 '#FFFFFF',
+                '#6E0070',
                 '#D2D2D2'
             ]
         },
@@ -273,34 +285,6 @@
                 '#FFFFFF',
                 '#D629A9',
                 '#7B1FA2'
-            ]
-        },
-
-        // Achillean / MLM
-        {
-            words: ['mlm'],
-            colors: [
-                '#078D70',
-                '#26CEAA',
-                '#98E8C1',
-                '#FFFFFF',
-                '#7BADE2',
-                '#5049CC',
-                '#3D1A78'
-            ]
-        },
-
-        // WLW
-        {
-            words: ['wlw'],
-            colors: [
-                '#D52D00',
-                '#EF7627',
-                '#FF9A56',
-                '#FFFFFF',
-                '#D162A4',
-                '#B55690',
-                '#A30262'
             ]
         },
 
