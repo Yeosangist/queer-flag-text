@@ -6,6 +6,8 @@
 // @author       Yeosangist
 // @license      CC BY-NC-SA
 // @match        *://*/*
+// @downloadURL  https://raw.githubusercontent.com/Yeosangist/queer-flag-text/refs/heads/main/main.js
+// @updateURL    https://raw.githubusercontent.com/Yeosangist/queer-flag-text/refs/heads/main/main.js
 // @run-at       document-start
 // @grant        none
 // ==/UserScript==
@@ -49,7 +51,7 @@
                 '#078D70',
                 '#26CEAA',
                 '#98E8C1',
-                '#DDDDDD',
+                '#CCCCCC',
                 '#7BADE2',
                 '#5049CC',
                 '#3D1A78'
@@ -63,7 +65,7 @@
                 '#D52D00',
                 '#EF7627',
                 '#FF9A56',
-                '#DDDDDD',
+                '#CCCCCC',
                 '#D162A4',
                 '#B55690',
                 '#A30262'
@@ -98,7 +100,7 @@
             colors: [
                 '#5BCEFA',
                 '#F5A9B8',
-                '#DDDDDD',
+                '#CCCCCC',
                 '#F5A9B8',
                 '#5BCEFA'
             ]
@@ -109,7 +111,7 @@
             words: ['nonbinary', 'non-binary', 'enby'],
             colors: [
                 '#FCF434',
-                '#DDDDDD',
+                '#CCCCCC',
                 '#9C59D1',
                 '#2C2C2C'
             ]
@@ -121,7 +123,7 @@
             colors: [
                 '#000000',
                 '#A3A3A3',
-                '#DDDDDD',
+                '#CCCCCC',
                 '#800080'
             ]
         },
@@ -132,7 +134,7 @@
             colors: [
                 '#3DA542',
                 '#A7D379',
-                '#DDDDDD',
+                '#CCCCCC',
                 '#A9A9A9',
                 '#000000'
             ]
@@ -144,7 +146,7 @@
             colors: [
                 '#DD8A00',
                 '#E9CC07',
-                '#DDDDDD',
+                '#CCCCCC',
                 '#65B0DD',
                 '#213C57'
             ]
@@ -155,7 +157,7 @@
             words: ['demisexual', 'demi'],
             colors: [
                 '#000000',
-                '#DDDDDD',
+                '#CCCCCC',
                 '#6E0070',
                 '#D2D2D2'
             ]
@@ -167,7 +169,7 @@
             colors: [
                 '#39A94A',
                 '#B5DF9B',
-                '#DDDDDD',
+                '#CCCCCC',
                 '#A9A9A9',
                 '#000000'
             ]
@@ -178,7 +180,7 @@
             words: ['genderfluid', 'gender-fluid'],
             colors: [
                 '#FF75A2',
-                '#DDDDDD',
+                '#CCCCCC',
                 '#BE18D6',
                 '#000000',
                 '#333EBD'
@@ -190,7 +192,7 @@
             words: ['genderqueer', 'gender-queer'],
             colors: [
                 '#B57EDC',
-                '#DDDDDD',
+                '#CCCCCC',
                 '#4A8123'
             ]
         },
@@ -201,9 +203,9 @@
             colors: [
                 '#000000',
                 '#B9B9B9',
-                '#DDDDDD',
+                '#CCCCCC',
                 '#B8F483',
-                '#DDDDDD',
+                '#CCCCCC',
                 '#B9B9B9',
                 '#000000'
             ]
@@ -225,10 +227,10 @@
         {
             words: ['pangender'],
             colors: [
-                '#FFF798',
-                '#FFDDCD',
-                '#FFEBFB',
-                '#DDDDDD'
+                '#fdf48d',
+                '#f3b79c',
+                '#fac3ef',
+                '#CCCCCC'
             ]
         },
 
@@ -238,7 +240,7 @@
             colors: [
                 '#FF9A4D',
                 '#FF53BF',
-                '#DDDDDD',
+                '#CCCCCC',
                 '#625FFF',
                 '#1F9BFF'
             ]
@@ -282,7 +284,7 @@
             words: ['sapphic'],
             colors: [
                 '#FF8DC7',
-                '#DDDDDD',
+                '#CCCCCC',
                 '#D629A9',
                 '#7B1FA2'
             ]
@@ -293,7 +295,7 @@
             words: ['questioning'],
             colors: [
                 '#FF75A2',
-                '#DDDDDD',
+                '#CCCCCC',
                 '#9C59D1',
                 '#2C2C2C',
                 '#5BCEFA'
