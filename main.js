@@ -51,7 +51,7 @@
                 '#078D70',
                 '#26CEAA',
                 '#98E8C1',
-                '#CCCCCC',
+                '#DDDDDD',
                 '#7BADE2',
                 '#5049CC',
                 '#3D1A78'
@@ -65,7 +65,7 @@
                 '#D52D00',
                 '#EF7627',
                 '#FF9A56',
-                '#CCCCCC',
+                '#DDDDDD',
                 '#D162A4',
                 '#B55690',
                 '#A30262'
@@ -100,7 +100,7 @@
             colors: [
                 '#5BCEFA',
                 '#F5A9B8',
-                '#CCCCCC',
+                '#DDDDDD',
                 '#F5A9B8',
                 '#5BCEFA'
             ]
@@ -111,7 +111,7 @@
             words: ['nonbinary', 'non-binary', 'enby'],
             colors: [
                 '#FCF434',
-                '#CCCCCC',
+                '#DDDDDD',
                 '#9C59D1',
                 '#2C2C2C'
             ]
@@ -123,7 +123,7 @@
             colors: [
                 '#000000',
                 '#A3A3A3',
-                '#CCCCCC',
+                '#DDDDDD',
                 '#800080'
             ]
         },
@@ -134,7 +134,7 @@
             colors: [
                 '#3DA542',
                 '#A7D379',
-                '#CCCCCC',
+                '#DDDDDD',
                 '#A9A9A9',
                 '#000000'
             ]
@@ -146,7 +146,7 @@
             colors: [
                 '#DD8A00',
                 '#E9CC07',
-                '#CCCCCC',
+                '#DDDDDD',
                 '#65B0DD',
                 '#213C57'
             ]
@@ -157,7 +157,7 @@
             words: ['demisexual', 'demi'],
             colors: [
                 '#000000',
-                '#CCCCCC',
+                '#DDDDDD',
                 '#6E0070',
                 '#D2D2D2'
             ]
@@ -169,7 +169,7 @@
             colors: [
                 '#39A94A',
                 '#B5DF9B',
-                '#CCCCCC',
+                '#DDDDDD',
                 '#A9A9A9',
                 '#000000'
             ]
@@ -180,7 +180,7 @@
             words: ['genderfluid', 'gender-fluid'],
             colors: [
                 '#FF75A2',
-                '#CCCCCC',
+                '#DDDDDD',
                 '#BE18D6',
                 '#000000',
                 '#333EBD'
@@ -192,7 +192,7 @@
             words: ['genderqueer', 'gender-queer'],
             colors: [
                 '#B57EDC',
-                '#CCCCCC',
+                '#DDDDDD',
                 '#4A8123'
             ]
         },
@@ -203,9 +203,9 @@
             colors: [
                 '#000000',
                 '#B9B9B9',
-                '#CCCCCC',
+                '#DDDDDD',
                 '#B8F483',
-                '#CCCCCC',
+                '#DDDDDD',
                 '#B9B9B9',
                 '#000000'
             ]
@@ -230,7 +230,7 @@
                 '#fdf48d',
                 '#f3b79c',
                 '#fac3ef',
-                '#CCCCCC'
+                '#DDDDDD'
             ]
         },
 
@@ -240,7 +240,7 @@
             colors: [
                 '#FF9A4D',
                 '#FF53BF',
-                '#CCCCCC',
+                '#DDDDDD',
                 '#625FFF',
                 '#1F9BFF'
             ]
@@ -284,7 +284,7 @@
             words: ['sapphic'],
             colors: [
                 '#FF8DC7',
-                '#CCCCCC',
+                '#DDDDDD',
                 '#D629A9',
                 '#7B1FA2'
             ]
@@ -295,7 +295,7 @@
             words: ['questioning'],
             colors: [
                 '#FF75A2',
-                '#CCCCCC',
+                '#DDDDDD',
                 '#9C59D1',
                 '#2C2C2C',
                 '#5BCEFA'
