@@ -363,9 +363,6 @@
             color: transparent !important;
             -webkit-text-fill-color: transparent !important;
 
-            /* Improve contrast against white and block-colour backgrounds. */
-            text-shadow: 0 0 1px #808080, 0 1px 2px #808080 !important;
-
             /*
             * Preserve the surrounding site's typography.
             */
