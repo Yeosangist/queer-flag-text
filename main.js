@@ -15,6 +15,23 @@
 (() => {
     'use strict';
 
+    const hostname = window.location.hostname.toLowerCase();
+    const isTumblr =
+        hostname === 'tumblr.com' ||
+        hostname.endsWith('.tumblr.com');
+
+    const TUMBLR_SAFE_SELECTOR = [
+        'article',
+        '[role="article"]',
+        '[data-testid="post-body"]',
+        '[data-testid="post_body"]',
+        '.post-body',
+        '.post_body',
+        '.npf',
+        '.npf_text',
+        '.reblog-content'
+    ].join(',');
+
     /*
      * ============================================================
      * WORDS / FLAGS
@@ -121,7 +138,7 @@
         {
             words: ['asexual', 'ace'],
             colors: [
-                '#000000',
+                '#2C2C2C',
                 '#A3A3A3',
                 '#DDDDDD',
                 '#800080'
@@ -130,19 +147,19 @@
 
         // Aromantic
         {
-            words: ['aromantic', 'aro'],
+            words: ['aromantic', 'aro', 'aro spectrum', 'aromantic spectrum', 'arospec', 'aro-spec'],
             colors: [
                 '#3DA542',
                 '#A7D379',
                 '#DDDDDD',
                 '#A9A9A9',
-                '#000000'
+                '#2C2C2C'
             ]
         },
 
         // AroAce
         {
-            words: ['aroace', 'aromantic asexual', 'aromantic-asexual', 'aromantic/asexual'],
+            words: ['aroace', 'aromantic-asexual', 'aromantic/asexual'],
             colors: [
                 '#DD8A00',
                 '#E9CC07',
@@ -156,7 +173,7 @@
         {
             words: ['demisexual', 'demi'],
             colors: [
-                '#000000',
+                '#2C2C2C',
                 '#DDDDDD',
                 '#6E0070',
                 '#D2D2D2'
@@ -171,7 +188,7 @@
                 '#B5DF9B',
                 '#DDDDDD',
                 '#A9A9A9',
-                '#000000'
+                '#2C2C2C'
             ]
         },
 
@@ -182,7 +199,7 @@
                 '#FF75A2',
                 '#DDDDDD',
                 '#BE18D6',
-                '#000000',
+                '#2C2C2C',
                 '#333EBD'
             ]
         },
@@ -201,13 +218,13 @@
         {
             words: ['agender'],
             colors: [
-                '#000000',
+                '#2C2C2C',
                 '#B9B9B9',
                 '#DDDDDD',
                 '#B8F483',
                 '#DDDDDD',
                 '#B9B9B9',
-                '#000000'
+                '#2C2C2C'
             ]
         },
 
@@ -299,6 +316,344 @@
                 '#9C59D1',
                 '#2C2C2C',
                 '#5BCEFA'
+            ]
+        },
+        // Polyamorous
+        {
+            words: ['polyamorous', 'polyamory', 'polyam'],
+            colors: [
+                '#009FE3',
+                '#E50051',
+                '#340C46',
+                '#DDDDDD',
+                '#FCBF00'
+            ]
+        },
+
+        // Abrosexual
+        {
+            words: ['abrosexual', 'abro'],
+            colors: [
+                '#46D294',
+                '#A3E9C8',
+                '#DDDDDD',
+                '#F5A9B8',
+                '#EE1766'
+            ]
+        },
+
+        // Graysexual / Gray-asexual
+        {
+            words: ['graysexual', 'greysexual', 'gray-asexual', 'grey-asexual', 'gray ace', 'grey ace'],
+            colors: [
+                '#740195',
+                '#B2B2B2',
+                '#DDDDDD',
+                '#B2B2B2',
+                '#740195'
+            ]
+        },
+
+        // Grayromantic
+        {
+            words: ['grayromantic', 'greyromantic', 'gray-romantic', 'grey-romantic'],
+            colors: [
+                '#087D16',
+                '#B2B2B2',
+                '#DDDDDD',
+                '#B2B2B2',
+                '#087D16'
+            ]
+        },
+
+        // Demigender
+        {
+            words: ['demigender', 'demi-gender'],
+            colors: [
+                '#7F7F7F',
+                '#C4C4C4',
+                '#FFEE70',
+                '#DDDDDD',
+                '#FFEE70',
+                '#C4C4C4',
+                '#7F7F7F'
+            ]
+        },
+
+        // Demiboy
+        {
+            words: ['demiboy', 'demiguy'],
+            colors: [
+                '#7F7F7F',
+                '#C4C4C4',
+                '#9AD9EB',
+                '#DDDDDD',
+                '#9AD9EB',
+                '#C4C4C4',
+                '#7F7F7F'
+            ]
+        },
+
+        // Demigirl
+        {
+            words: ['demigirl'],
+            colors: [
+                '#7F7F7F',
+                '#C4C4C4',
+                '#FFAEC9',
+                '#DDDDDD',
+                '#FFAEC9',
+                '#C4C4C4',
+                '#7F7F7F'
+            ]
+        },
+
+        // Genderflux
+        {
+            words: ['genderflux', 'gender-flux'],
+            colors: [
+                '#F47694',
+                '#F2A3B9',
+                '#CECECE',
+                '#7CE0F7',
+                '#3ECDF9',
+                '#FFF48E'
+            ]
+        },
+
+        // Bigender
+        {
+            words: ['bigender'],
+            colors: [
+                '#C479A2',
+                '#EDA5CD',
+                '#D6C7E8',
+                '#DDDDDD',
+                '#9AC7E8',
+                '#6D82D1'
+            ]
+        },
+
+        // Genderfae
+        {
+            words: ['genderfae', 'gender-fae'],
+            colors: [
+                '#97C3A5',
+                '#C3DEAE',
+                '#F9FACD',
+                '#DDDDDD',
+                '#FCA2C4',
+                '#DB8AE4',
+                '#A97EDD'
+            ]
+        },
+
+        // Genderfaun
+        {
+            words: ['genderfaun', 'gender-faun'],
+            colors: [
+                '#FCD689',
+                '#FFF09B',
+                '#FAF9CD',
+                '#DDDDDD',
+                '#8EDED9',
+                '#8CACDE',
+                '#9782EC'
+            ]
+        },
+
+        // Xenogender
+        {
+            words: ['xenogender', 'xeno-gender', 'xenogenders'],
+            colors: [
+                '#FF6691',
+                '#FF9997',
+                '#FFB782',
+                '#FBFFA6',
+                '#84BBFF',
+                '#9C84FF',
+                '#A317FF'
+            ]
+        },
+
+        // Lithromantic / Akoiromantic
+        {
+            words: ['lithromantic', 'lithro', 'akoiromantic', 'akoi'],
+            colors: [
+                '#7CBE42',
+                '#FDEE23',
+                '#A2A2A2'
+            ]
+        },
+
+        // Fraysexual
+        {
+            words: ['fraysexual', 'fray'],
+            colors: [
+                '#226CB5',
+                '#93E7DD',
+                '#DDDDDD',
+                '#636363'
+            ]
+        },
+
+        // Cupiosexual
+        {
+            words: ['cupiosexual', 'cupio'],
+            colors: [
+                '#A0A0A0',
+                '#C8BFE6',
+                '#DDDDDD',
+                '#FFB3DA'
+            ]
+        },
+
+        // Cupioromantic
+        {
+            words: ['cupioromantic', 'cupio romantic'],
+            colors: [
+                '#FCA9A3',
+                '#FDC5C0',
+                '#DDDDDD',
+                '#C8BFE6',
+                '#A0A0A0'
+            ]
+        },
+
+        // Aegosexual
+        {
+            words: ['aegosexual', 'autochorissexual', 'auto-chorissexual', 'aego'],
+            colors: [
+                '#2C2C2C',
+                '#A3A3A3',
+                '#DDDDDD',
+                '#800080'
+            ]
+        },
+        // Trigender
+        {
+            words: ['trigender', 'tri-gender'],
+            colors: [
+                '#FF76A4',
+                '#FFB3CB',
+                '#DDDDDD',
+                '#3DA542',
+                '#9AC7E8',
+                '#6D82D1',
+                '#9C59D1'
+            ]
+        },
+
+        // Multigender
+        {
+            words: ['multigender', 'multi-gender'],
+            colors: [
+                '#3F47CD',
+                '#00A3E8',
+                '#FA7F27',
+                '#00A3E8',
+                '#3F47CD'
+            ]
+        },
+
+        // Polygender
+        {
+            words: ['polygender', 'poly-gender'],
+            colors: [
+                '#2C2C2C',
+                '#8FA6BF',
+                '#E875A8',
+                '#F4E64D',
+                '#39A9E8'
+            ]
+        },
+
+        // Androgyne
+        {
+            words: ['androgyne', 'androgynous', 'androgyny'],
+            colors: [
+                '#FE007F',
+                '#9A00FF',
+                '#00B8E7'
+            ]
+        },
+
+        // Neutrois
+        {
+            words: ['neutrois'],
+            colors: [
+                '#DDDDDD',
+                '#1F9B00',
+                '#2C2C2C'
+            ]
+        },
+
+        // Maverique
+        {
+            words: ['maverique'],
+            colors: [
+                '#FFF344',
+                '#DDDDDD',
+                '#F49622'
+            ]
+        },
+
+        // Omnigender
+        {
+            words: ['omnigender', 'omni-gender'],
+            colors: [
+                '#F4A6C1',
+                '#C8C4E2',
+                '#A94BA8',
+                '#7194C4',
+                '#9AD8E8'
+            ]
+        },
+
+        // Aporagender
+        {
+            words: ['aporagender', 'apora-gender', 'apora'],
+            colors: [
+                '#F5A6C8',
+                '#9A8AE8',
+                '#F4D44D',
+                '#7F9FE8',
+                '#F5A6C8'
+            ]
+        },
+
+        // Gendervoid
+        {
+            words: ['gendervoid', 'gender void', 'gender-void'],
+            colors: [
+                '#0B164F',
+                '#4A4A4A',
+                '#2C2C2C',
+                '#4A4A4A',
+                '#0B164F'
+            ]
+        },
+
+        // Greygender
+        {
+            words: ['greygender', 'graygender', 'grey-gender', 'gray-gender'],
+            colors: [
+                '#DDDDDD',
+                '#ABABAB',
+                '#3D3D3D',
+                '#9B59B6',
+                '#2C2C2C'
+            ]
+        },
+
+        // Quoiromantic
+        {
+            words: ['quoiromantic', 'wtfromantic', 'quoi-romantic'],
+            colors: [
+                '#2C2C2C',
+                '#8BCF45',
+                '#55C7D9',
+                '#A4A4A4'
             ]
         },
     ];
@@ -460,6 +815,18 @@
      * ============================================================
      */
 
+    function isTumblrSafeNode(node) {
+        if (!isTumblr) {
+            return true;
+        }
+
+        const element = node.nodeType === Node.ELEMENT_NODE
+            ? node
+            : node.parentElement;
+
+        return !!element && !!element.closest(TUMBLR_SAFE_SELECTOR);
+    }
+
     function processTextNode(node) {
         if (!node || !node.parentElement) {
             return;
@@ -467,7 +834,11 @@
 
         const parent = node.parentElement;
 
-        if (IGNORED_ELEMENTS.has(parent.tagName) || parent.isContentEditable) {
+        if (
+            !isTumblrSafeNode(node) ||
+            IGNORED_ELEMENTS.has(parent.tagName) ||
+            parent.closest('[contenteditable]:not([contenteditable="false"])')
+        ) {
             return;
         }
 
@@ -540,6 +911,15 @@
             return;
         }
 
+        if (
+            isTumblr &&
+            !element.matches(TUMBLR_SAFE_SELECTOR) &&
+            !element.closest(TUMBLR_SAFE_SELECTOR) &&
+            !element.querySelector(TUMBLR_SAFE_SELECTOR)
+        ) {
+            return;
+        }
+
         if (element.classList.contains(HIGHLIGHT_CLASS)) {
             return;
         }
@@ -555,11 +935,15 @@
                         return NodeFilter.FILTER_REJECT;
                     }
 
+                    if (!isTumblrSafeNode(node)) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+
                     if (IGNORED_ELEMENTS.has(parent.tagName)) {
                         return NodeFilter.FILTER_REJECT;
                     }
 
-                    if (parent.isContentEditable) {
+                    if (parent.closest('[contenteditable]:not([contenteditable="false"])')) {
                         return NodeFilter.FILTER_REJECT;
                     }
 
